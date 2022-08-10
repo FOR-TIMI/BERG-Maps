@@ -6,18 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berg map</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
 
+    <!-- Mapbox CSS -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+
+    <!-- Mapbox Directions  -->
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+
+    <!-- tailwind CSS  -->
+   <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 
 <body>
 
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+    
     <div id="map"></div>
+
+    <section id="recent-searches">
+
+    </section>
+
+    <section id="weather" class="bg-white rounded  shadow-md overflow-hidden"> 
+        <div class="flex flex-row justify-around items-center">
+            <h5 id="city" class="text-2xl">Toronto</h5>
+
+            <div class=" flex font-medium flex-col ml-10 items-center">
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon">
+                <p class="temperature">27°C</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+<!-- tailwind  -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Mapbox Script  -->
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+
+<!-- Mapbox direction js  -->
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
 
 
 <script src="assets/js/map.js"></script>

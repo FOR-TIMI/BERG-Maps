@@ -2,14 +2,19 @@
 //Happy Coding!
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoZWJiaGFsbGEiLCJhIjoiY2w2bXg2MXYwMDM3ZzNxcWoxYzdmbjhkeSJ9.5HnzmM4U9a2dpxbBlxO4mA';
+const WEATHER_API_KEY = '2e1ebfe75535cfe66e25a2a55515c1e0'
+
+
 
  
 //To get the user's current location
 navigator.geolocation.getCurrentPosition(locationSuccess,locationError, {enableHighAccuracy:true})
 
+
 //if the getPosition request is sucessful
 function locationSuccess(position){
-    setLocationToMap([position.coords.longitude,position.coords.latitude])
+    // setLocationToMap([position.coords.longitude,position.coords.latitude])
+    getWeather(position.coords.longitude,position.coords.latitude)
 }
 
 //if the getPosition is unsuccessful, Longitude and latitude defaults to Downtown Toronto
@@ -18,45 +23,54 @@ function locationError(){
 }
 
 
-
-
-//To set the location to the map
-function setLocationToMap(position){
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL can also be used to change styles
-        center: position, // starting position [lng, lat]
-        zoom: 14, // starting zoom
-        projection: 'globe' // display the map as a 3D globe
-        });
+// //To set the location to the map
+// function setLocationToMap(position){
+//     const map = new mapboxgl.Map({
+//         container: 'map', // container ID
+//         style: 'mapbox://styles/mapbox/streets-v11', // style URL can also be used to change styles
+//         center: position, // starting position [lng, lat]
+//         zoom: 14, // starting zoom
+//         projection: 'globe' // display the map as a 3D globe
+//         });
     
-    map.on('style.load', () => {
-        map.setFog({}); // Set the default atmosphere style
-        });
+//     map.on('style.load', () => {
+//         map.setFog({}); // Set the default atmosphere style
+//         });
 
-  //Controls the marker 
-    map.addControl(new mapboxgl.GeolocateControl({
-            positionOptions: {
-                enableHighAccuracy: true
-            },
-            trackUserLocation: true,
-            showUserHeading: true
-        }));
-
-
-
-    //Buttons to zoom in and out of the map and rotation controls to the map.
-    map.addControl(new mapboxgl.NavigationControl());
+//   //Controls the marker 
+//     map.addControl(new mapboxgl.GeolocateControl({
+//             positionOptions: {
+//                 enableHighAccuracy: true
+//             },
+//             trackUserLocation: true,
+//             showUserHeading: true
+//         }));
 
 
-    //To get directions
-    map.addControl(
-        new MapboxDirections({
-        accessToken: mapboxgl.accessToken
-        }),
-        'top-left'
-        );
 
+//     //Buttons to zoom in and out of the map and rotation controls to the map.
+//     map.addControl(new mapboxgl.NavigationControl());
+
+
+//     //To get directions
+//     map.addControl(
+//         new MapboxDirections({
+//         accessToken: mapboxgl.accessToken
+//         }),
+//         'top-left'
+//         );
+
+// }
+
+
+//To get weather data
+function getWeather(lon,lat){
+    console.log("Longitude is ",lon,"latitude is", lat)
+    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=b3d233c09be1dd283fac50c81f1249cd&exclude=hourly,daily&unit=metric`
+    fetch(url).then(response => response.json())
+    .then(data => {
+           console.log(data);
+    })
 }
 
 
