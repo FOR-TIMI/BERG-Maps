@@ -1,22 +1,63 @@
+<<<<<<< HEAD
 body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%;}
+=======
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap');
+body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+>>>>>>> 70fbab1fff1910e74094d5611b2c10530a1cc833
 
 #weather{ 
     position: absolute;
     top: 20%;
-    left: 0.6%;
+    left: 0.4%;
     width: 300px;
+<<<<<<< HEAD
     height: 100px;
+    z-index: 2;
+ } */
+=======
+    height: 50px;
     z-index: 1;
  }
+>>>>>>> 70fbab1fff1910e74094d5611b2c10530a1cc833
 
- img{
-    width: 60px;
-    height: 60px;
+#weather img{
+    width: 30px;
+    height: 30px;
+    
  }
 
 .directions-control-instructions{
     z-index:99;
     background-color: #fff ;
 }
+.viewButton{
+    width: 70px;
+    border:none;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+.menuButton{
 
+}
+.primaryButton{
+    width:100px;
+    
+}
+.popup{
+    width:100px;
+    display: none;
+}
+.popup--visible{
+    display: initial;
+}
+.mapLayer{
+    position: absolute;
+    bottom: 2%;
+    right: 0.6%;
+    z-index: 1;
+}
+ 
