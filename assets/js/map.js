@@ -13,7 +13,7 @@ navigator.geolocation.getCurrentPosition(locationSuccess,locationError, {enableH
 
 //if the getPosition request is sucessful
 function locationSuccess(position){
-    // setLocationToMap([position.coords.longitude,position.coords.latitude])
+    setLocationToMap([position.coords.longitude,position.coords.latitude])
     getWeather(position.coords.longitude,position.coords.latitude)
 }
 
@@ -24,43 +24,43 @@ function locationError(){
 
 
 // //To set the location to the map
-// function setLocationToMap(position){
-//     const map = new mapboxgl.Map({
-//         container: 'map', // container ID
-//         style: 'mapbox://styles/mapbox/streets-v11', // style URL can also be used to change styles
-//         center: position, // starting position [lng, lat]
-//         zoom: 14, // starting zoom
-//         projection: 'globe' // display the map as a 3D globe
-//         });
+function setLocationToMap(position){
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL can also be used to change styles
+        center: position, // starting position [lng, lat]
+        zoom: 14, // starting zoom
+        projection: 'globe' // display the map as a 3D globe
+        });
     
-//     map.on('style.load', () => {
-//         map.setFog({}); // Set the default atmosphere style
-//         });
+    map.on('style.load', () => {
+        map.setFog({}); // Set the default atmosphere style
+        });
 
-//   //Controls the marker 
-//     map.addControl(new mapboxgl.GeolocateControl({
-//             positionOptions: {
-//                 enableHighAccuracy: true
-//             },
-//             trackUserLocation: true,
-//             showUserHeading: true
-//         }));
-
-
-
-//     //Buttons to zoom in and out of the map and rotation controls to the map.
-//     map.addControl(new mapboxgl.NavigationControl());
+  //Controls the marker 
+    map.addControl(new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true,
+            showUserHeading: true
+        }));
 
 
-//     //To get directions
-//     map.addControl(
-//         new MapboxDirections({
-//         accessToken: mapboxgl.accessToken
-//         }),
-//         'top-left'
-//         );
 
-// }
+    //Buttons to zoom in and out of the map and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
+
+
+    //To get directions
+    map.addControl(
+        new MapboxDirections({
+        accessToken: mapboxgl.accessToken
+        }),
+        'top-left'
+        );
+
+}
 
 
 //To get weather data
