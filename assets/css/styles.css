@@ -25,9 +25,14 @@ body { margin: 0; padding: 0; }
     display: flex;
     align-items:center;
     justify-content: center;
+    
+}
+.menuButton{
+
 }
 .primaryButton{
     width:60px;
+    
 }
 .popup{
     width:50px;
