@@ -73,9 +73,6 @@ function getLocationName(lat,lon){
     geocoder.geocode(
         {'latLng': latlng}, 
         function(results, status) {
-
-
-
             if (status == google.maps.GeocoderStatus.OK) {
 
                 if (results[1]) {
@@ -105,7 +102,6 @@ function getLocationName(lat,lon){
  
 }
 
-                }
               
 //To get weather data
 function getWeather(lon,lat,city){
@@ -116,8 +112,6 @@ function getWeather(lon,lat,city){
           showWeatherData(data.current,city);
     })
         }
-
-} )
 
 
 //To set current weather to the page
@@ -132,17 +126,6 @@ function showWeatherData(data,city){
     </div>`
 }
 
-
-
-
-    
-
-//To get weather data
-function getWeather(lon,lat,city){
-
-    const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=b3d233c09be1dd283fac50c81f1249cd&exclude=hourly,daily,minutely&units=metric`
-    fetch(url).then(response => response.json())
-    .then(data => {
-          showWeatherData(data.current,city);
-    })
-}
+$( function() {
+    $( "#weather" ).draggable();
+  } );
