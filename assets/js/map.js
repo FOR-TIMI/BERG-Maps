@@ -1,19 +1,43 @@
 //Where are you going today? BERG map can show you the way :)
 //Happy Coding!
-
+//Our api KEY hardcoded so you dont have to use it everytime 
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoZWJiaGFsbGEiLCJhIjoiY2w2bXg2MXYwMDM3ZzNxcWoxYzdmbjhkeSJ9.5HnzmM4U9a2dpxbBlxO4mA';
 const WEATHER_API_KEY = '2e1ebfe75535cfe66e25a2a55515c1e0'
+var defaultPostion = 'mapbox://styles/mapbox/streets-v11'
 
+var getPostion= function(){ 
+ return 'mapbox://styles/mapbox/streets-v11'
+}
 
+// enable maplayer menu buttons
+document.querySelectorAll(".mapLayer").forEach(multiAction =>{
+    const menuButton = multiAction.querySelector(".primaryButton");
+    const list=  multiAction.querySelector(".popup");
 
- 
-//To get the user's current location
-navigator.geolocation.getCurrentPosition(locationSuccess,locationError, {enableHighAccuracy:true})
+    menuButton.addEventListener("click",()=>{
+        list.classList.toggle("popup--visible");
+    })
+})
+//Hide the mapLayer buttons
+document.addEventListener("click", e=>{
+    const keepOpen = (
+        e.target.matches(".popup") || e.target.matches(".primaryButton")
+    );  
 
+    if(e.target.matches(".menuButton")){
+        console.log("changing view");
+    }
+    if(keepOpen) return;
+    
+    document.querySelectorAll(".popup").forEach(list =>{
+        list.classList.remove("popup--visible");
+    })
+}) 
 
 //if the getPosition request is sucessful
 function locationSuccess(position){
-    // setLocationToMap([position.coords.longitude,position.coords.latitude])
+
+    setLocationToMap([position.coords.longitude,position.coords.latitude])
     getWeather(position.coords.longitude,position.coords.latitude)
 }
 
@@ -23,44 +47,44 @@ function locationError(){
 }
 
 
-// //To set the location to the map
-// function setLocationToMap(position){
-//     const map = new mapboxgl.Map({
-//         container: 'map', // container ID
-//         style: 'mapbox://styles/mapbox/streets-v11', // style URL can also be used to change styles
-//         center: position, // starting position [lng, lat]
-//         zoom: 14, // starting zoom
-//         projection: 'globe' // display the map as a 3D globe
-//         });
+//To set the location to the map
+function setLocationToMap(position){
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: getPostion(), // style URL can also be used to change styles
+        center: position, // starting position [lng, lat]
+        zoom: 14, // starting zoom
+        projection: 'globe' // display the map as a 3D globe
+        });
     
-//     map.on('style.load', () => {
-//         map.setFog({}); // Set the default atmosphere style
-//         });
+    map.on('style.load', () => {
+        map.setFog({}); // Set the default atmosphere style
+        });
 
-//   //Controls the marker 
-//     map.addControl(new mapboxgl.GeolocateControl({
-//             positionOptions: {
-//                 enableHighAccuracy: true
-//             },
-//             trackUserLocation: true,
-//             showUserHeading: true
-//         }));
-
-
-
-//     //Buttons to zoom in and out of the map and rotation controls to the map.
-//     map.addControl(new mapboxgl.NavigationControl());
+  //Controls the marker 
+    map.addControl(new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true,
+            showUserHeading: true
+        }));
 
 
-//     //To get directions
-//     map.addControl(
-//         new MapboxDirections({
-//         accessToken: mapboxgl.accessToken
-//         }),
-//         'top-left'
-//         );
 
-// }
+    //Buttons to zoom in and out of the map and rotation controls to the map.
+    map.addControl(new mapboxgl.NavigationControl());
+
+
+    //To get directions
+    map.addControl(
+        new MapboxDirections({
+        accessToken: mapboxgl.accessToken
+        }),
+        'top-left'
+        );
+
+}
 
 
 //To get weather data
@@ -72,7 +96,8 @@ function getWeather(lon,lat){
            console.log(data);
     })
 }
-
-
-    
-
+//First Call of the page 
+//LocationSucess is a mothod 
+//locationError is a method 
+//To get the user's current location//This method will get the First 
+navigator.geolocation.getCurrentPosition(locationSuccess,locationError, {enableHighAccuracy:true})

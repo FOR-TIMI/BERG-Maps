@@ -1,5 +1,5 @@
 body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%;}
 
 #weather{ 
     position: absolute;
@@ -7,8 +7,8 @@ body { margin: 0; padding: 0; }
     left: 0.6%;
     width: 300px;
     height: 100px;
-    z-index: 1;
- }
+    z-index: 2;
+ } */
 
  img{
     width: 60px;
@@ -19,4 +19,27 @@ body { margin: 0; padding: 0; }
     z-index:99;
     background-color: #fff ;
 }
-
+.viewButton{
+    width: 50px;
+    border:none;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.primaryButton{
+    width:60px;
+}
+.popup{
+    width:50px;
+    display: none;
+}
+.popup--visible{
+    display: initial;
+}
+.mapLayer{
+    position: absolute;
+    bottom: 2%;
+    right: 0.6%;
+    z-index: 1;
+}
+ 
