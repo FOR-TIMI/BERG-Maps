@@ -20,7 +20,7 @@ body { margin: 0; padding: 0; }
     background-color: #fff ;
 }
 .viewButton{
-    width: 50px;
+    width: 70px;
     border:none;
     display: flex;
     align-items:center;
@@ -31,11 +31,11 @@ body { margin: 0; padding: 0; }
 
 }
 .primaryButton{
-    width:60px;
+    width:100px;
     
 }
 .popup{
-    width:50px;
+    width:100px;
     display: none;
 }
 .popup--visible{
