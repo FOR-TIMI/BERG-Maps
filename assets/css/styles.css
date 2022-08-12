@@ -2,24 +2,50 @@
 body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 
+
 #weather{ 
     position: absolute;
     top: 20%;
     left: 0.4%;
     width: 300px;
-    height: 50px;
-    z-index: 1;
- }
+    height: 75px;
+    z-index: 2;
+ } 
 
 #weather img{
     width: 35px;
-    height: 35px;
-    
+    height: 35px;   
  }
 
 .directions-control-instructions{
     z-index:99;
     background-color: #fff ;
 }
+.viewButton{
+    width: 70px;
+    border:none;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+}
 
+.primaryButton{
+    width:100px;
+    
+}
+.popup{
+    width:100px;
+    display: none;
+}
+.popup--visible{
+    display: initial;
+}
+.mapLayer{
+    position: absolute;
+    bottom: 2%;
+    right: 0.6%;
+    z-index: 1;
+}
+ 
 

@@ -8,29 +8,52 @@
         <!-- Mapbox CSS -->
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
 
+
         <!-- Mapbox Directions  -->
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
     
     
+         <!-- Our styles  -->
         <link rel="stylesheet" href="assets/css/styles.css">
+
+
         <title>Berg map</title>
 </head>
 
 <body>
     
-  <!-- Map  -->
-  <div id="map"></div>
+    <!-- Map  -->
+    <div id="map"></div>
   
-  <!-- Recent search  -->
-  <section id="recent-searches">
-  </section>
+    <!-- Recent search  -->
+    <section id="recent-searches">
 
-  <!-- weather  -->
-  <section id="weather" class="bg-white rounded flex justify-center items-center shadow-md overflow-hidden ui-widget-content"> 
+        <!-- recent searches will go here  -->
 
-      <!-- weather details go here  -->
+    </section>
 
-  </section>
+
+
+    <section id="weather" class="bg-white rounded flex justify-center items-center shadow-md overflow-hidden "> 
+
+        <!-- weather details will go here  -->
+
+    </section>
+
+
+    <section class = "mapLayer">
+        <button class ="viewButton"><img src="assets/icons/satelitle.png" class ="primaryButton" alt=""></button>
+            <div class ="popup">
+                <button class ="viewButton"><img src="assets/icons/outdoors.png"id="outdoor" class ="menuButton"alt=""></button>
+                <button class ="viewButton"><img src="assets/icons/light.png" id= "light"class ="menuButton"alt=""></button>
+                <button class ="viewButton"><img src="assets/icons/darkMap.png" id= "dark"class ="menuButton" alt=""></button>
+                <button class ="viewButton"><img src="assets/icons/satellite.png" id="satellite"class ="menuButton"alt=""></button>   
+                <button class ="viewButton"><img src="assets/icons/satelitle.png" id="satelliteStreets"class ="menuButton" alt=""></button>
+                <button class ="viewButton"><img src="assets/icons/navigation.png" id ="navigationDay" class ="menuButton"alt=""></button>
+                <button class ="viewButton "><img src="assets/icons/map (2).png" id ="navigationNight"class ="menuButton" alt=""></button>
+            </div>
+    </section>
+
 
 
 
@@ -62,6 +85,7 @@
   <!-- jquery  -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+  <!-- jquery ui  -->
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 
