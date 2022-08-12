@@ -22,6 +22,7 @@ function locationSuccess(position){
 function locationError(){
     getLocationName(43.6547567,-79.3966769)
     setLocationToMap([-79.3966769,43.6547567])
+    getWeather(43.6547567,-79.3966769)
 }
 
 
