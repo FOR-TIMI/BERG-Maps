@@ -126,6 +126,7 @@ function showWeatherData(data,city){
     </div>`
 }
 
+// To make weather draggable
 $( function() {
     $( "#weather" ).draggable();
   } );
