@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berg Trips</title>
+
+        <!-- tailwind css  -->
+        <link 
+        rel="stylesheet" 
+        href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" 
+        />
+
+
+        <link rel="stylesheet" href="../css/recents.css">
+</head>
+<body>
+
+    <header>
+        <nav class=" border-gray-200 px-2 sm:px-4 py-2.5 rounded z-99">
+            <div class="container flex flex-wrap justify-between items-center mx-auto w-90">
+            <a href="#" class="flex items-center">
+                <i class="berg berg-logo"></i>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+
+
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium dark:border-gray-700 ">
+                <li>
+                    <a href="../html/home.html" class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                </li>
+                <li>
+                    <a href="../../index.html" class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">New Trip</a>
+                </li>
+                <li>
+                    <a href="../html/recentTrips.html" class="block py-2 pr-4 pl-3 text-lg text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white z-99"  aria-current="page">Trip History</a>
+                </li>
+
+                </ul>
+            </div>
+            </div>
+        </nav>
+   </header>
+
+   <main class="container mt-3 mx-auto md">
+   
+            <header class="flex flex-col items-end justify-end mb-5">   
+
+
+                <div class="transport-box">
+                    <p class="font-medium">Means of Transport</p>
+                    <div class="">
+                        <i class="berg berg-walking"></i>
+                        <span> Walking</span>
+                    </div>
+                    <div>
+                        <i class="berg berg-driving"></i>
+                        <span> Driving</span>
+                    </div>
+                    <div>
+                        <i class="berg berg-cycling"></i>
+                        <span> Cycling</span>
+                    </div>
+                </div>
+
+
+                <div class="w-full flex justify-center items-center">
+                    <span class="text-center text-3xl mr-2">History</span>
+                    <i class="berg berg-history text-3xl"></i>
+                </div>
+            </header>
+
+            <section class="trip-history">
+                <h4>August 2022</h4>
+
+                <table class="table-auto">
+                    <thead>
+                        <tr>
+                            <th>By</th>
+                            <th>Time</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="berg berg-walking text-3xl"></i></td>
+                            <td>15:10 PM</td>
+                            <td>2235 Ornadonato Street, Toronto</td>
+                            <td>3355-2374 Lagos,  Brampton  </td>
+                            <td>12 Jul</td>
+                        </tr>
+                        <tr>
+                            <td><i class="berg berg-driving  text-3xl"></i></td>
+                            <td>15:10 PM</td>
+                            <td>2235 Ornadonato Street, Toronto</td>
+                            <td>3355-2374 Lagos,  Brampton  </td>
+                            <td>12 Jul</td>
+                        </tr>
+                        <tr>
+                           <td><i class="berg berg-cycling text-3xl"></i></td>
+                            <td>15:10 PM</td>
+                            <td>2235 Ornadonato Street, Toronto</td>
+                            <td>3355-2374 Lagos,  Brampton  </td>
+                            <td>12 Jul</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <hr>
+                <h4>July 2022</h4>
+
+                <table class="table-auto">
+                    <thead>
+                        <tr>
+                            <th>By</th>
+                            <th>Time</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="berg berg-walking text-3xl"></i></td>
+                            <td>15:10 PM</td>
+                            <td>2235 Ornadonato Street, Toronto</td>
+                            <td>3355-2374 Lagos,  Brampton  </td>
+                            <td>12 Jul</td>
+                        </tr>
+                        <tr>
+                            <td><i class="berg berg-driving text-3xl"></i></td>
+                            <td>15:10 PM</td>
+                            <td>2235 Ornadonato Street, Toronto</td>
+                            <td>3355-2374 Lagos,  Brampton  </td>
+                            <td>12 Jul</td>
+                        </tr>
+                        <tr>
+                           <td><i class="berg berg-cycling text-3xl"></i></td>
+                            <td>15:10 PM</td>
+                            <td>2235 Ornadonato Street, Toronto</td>
+                            <td>3355-2374 Lagos,  Brampton  </td>
+                            <td>12 Jul</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            <hr>
+            <table class="table-auto">
+                <h4>June 2022</h4>
+                <thead>
+                    <tr>
+                        <th>By</th>
+                        <th>Time</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="berg berg-walking text-3xl"></i></td>
+                        <td>15:10 PM</td>
+                        <td>2235 Ornadonato Street, Toronto</td>
+                        <td>3355-2374 Lagos,  Brampton  </td>
+                        <td>12 Jul</td>
+                    </tr>
+                    <tr>
+                        <td><i class="berg berg-driving text-3xl"></i></td>
+                        <td>15:10 PM</td>
+                        <td>2235 Ornadonato Street, Toronto</td>
+                        <td>3355-2374 Lagos,  Brampton  </td>
+                        <td>12 Jul</td>
+                    </tr>
+                    <tr>
+                       <td><i class="berg berg-cycling text-3xl"></i></td>
+                        <td>15:10 PM</td>
+                        <td>2235 Ornadonato Street, Toronto</td>
+                        <td>3355-2374 Lagos,  Brampton  </td>
+                        <td>12 Jul</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            </section>
+
+   </main>
+
+
+
+
+
+
+  
+    <!-- tailwind Js  -->
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>  
+</body>
+</html>
