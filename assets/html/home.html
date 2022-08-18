@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Berg</title>
+
+    <!-- tailwind css  -->
+    <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" 
+    />
+
+    <!-- Animate css  -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
+
+</head>
+<body>
+
+    <header>
+        <nav class=" border-gray-200 px-2 sm:px-4 py-2.5 rounded z-99">
+            <div class="container flex flex-wrap justify-between items-center mx-auto w-90">
+            <a href="#" class="flex items-center">
+                <i class="berg berg-logo"></i>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+
+
+
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium dark:border-gray-700 ">
+                <li>
+                    <a href="#" class="block py-2 pr-4 pl-3 text-lg text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white z-99" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="../../index.html" class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">New Trip</a>
+                </li>
+                <li>
+                    <a href="#" class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Trip History</a>
+                </li>
+
+                </ul>
+            </div>
+            </div>
+        </nav>
+   </header>
+
+    <main class="flex justify-center items-center absolute hero">
+      <div class="absolute flex flex-col justify-center items-center">
+            <p class="text-2xl get-direction-text">Where are you going today?</p> 
+
+
+            
+            <a class="view-all animate__animated hvr-icon-wobble-horizontal" href="../../index.html">
+                <div class="button flex flex-row ">
+                    <span class="text-white pr-3">Get Directions</span> 
+                    <i class="berg berg-arrow-right hvr-icon pr-3"></i>  
+                </div>
+
+              
+
+            </a> 
+  
+             </div>
+       </div>
+
+       
+         <video src="../video/map.mp4" autoplay loop muted plays-inline class="background-video"></video>
+ 
+    </main>
+
+
+
+    
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
+
+
+</body>
+</html>

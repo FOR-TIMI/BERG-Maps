@@ -12,7 +12,7 @@ navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
     enableHighAccuracy: true,
   });
 
-  //In the event of a successfull goelocation
+//During the event of a successfull goelocation
 function locationSuccess(position){
     setLocationToMap([position.coords.longitude,position.coords.latitude])
     getLocationName(position.coords.latitude,position.coords.longitude)
@@ -25,6 +25,7 @@ function locationError(){
     setLocationToMap([-79.3966769,43.6547567])
     getWeather(43.6547567,-79.3966769)
 }
+
 
 var getPostion = function (postion) {
   if (postion == null) {
@@ -117,7 +118,6 @@ document.addEventListener("click", (e) => {
 });
 
 
-
 // //To set the location to the map
 function setLocationToMap(position){
     const map = new mapboxgl.Map({
@@ -156,7 +156,6 @@ function setLocationToMap(position){
         );
 
 }
-
 
 
 //To get the location's Name from google maps API
@@ -260,4 +259,52 @@ function showWeatherData(data,city){
 $( function() {
     $( "#weather" ).draggable();
   } );
+
+
+  //To get the most recent data first, rearrange the array from borrom to top
+const data = JSON.parse(localStorage.getItem('locations')).reverse()
+
+//To set recents
+searchContainer.click(function() {
+	removeElements();
+	let total = 0
+
+	//To check if the input container is empty on click
+	if($('.search-input').val() === ''){
+		for(let recentPlace of data){
+			//To limit the number of recents displayed on the page
+			if(total < 10){
+				const listItem = document.createElement('li');
+				listItem.classList.add("suggestion-item")
+				listItem.style.cursor = "pointer";
+				listItem.setAttribute("onclick","displayName('"+recentPlace+"')")
+				listItem.innerHTML = `<i class="ti ti-recent"></i><span class="recent-name">${recentPlace}</span>`
+				suggestionList.appendChild(listItem);
+				total++
+			}
+
+		}
+	}
+
+});
+
+//To save to recents
+function saveData(name){
+
+	if(localStorage.getItem('locations') == null){
+		localStorage.setItem('locations','[]')
+	}
+  
+
+	var oldLocation = JSON.parse(localStorage.getItem('locations'));
+
+
+	if(!oldLocation.includes(name)){
+			oldLocation.push(name);
+	}
+	
+
+	//Save the old + new data;
+	localStorage.setItem('locations', JSON.stringify(oldLocation));
+  } 
 
