@@ -5,9 +5,16 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoZWJiaGFsbGEiLCJhIjoiY2w2bXg2MXYwMDM3ZzNxcWoxYzdmbjhkeSJ9.5HnzmM4U9a2dpxbBlxO4mA';
 const WEATHER_API_KEY = 'd582054f0f0dcf06c41ec1c6aa2bd8a9'
 var defaultPostion = "mapbox://styles/mapbox/streets-v11";
+//Mahesh Start
+var mapDirectionsContainerEl = document.querySelector("#map");
+var myModalEl = document.querySelector("#myModal");
+//Mahesh end
 var currenttLat = "";
 var currentLong = "";
 var isLocationError = false;
+var originA = "";
+var destinationB = "";
+var mode = "Traffic";
 
 //To get the user's current location//This method gets user's current location
 var currentLocation = navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
@@ -15,10 +22,7 @@ var currentLocation = navigator.geolocation.getCurrentPosition(locationSuccess, 
 
 });
 
-function showPosition(position) {
-  console.log("Latitude: " + position.coords.latitude +
-    "Longitude: " + position.coords.longitude);
-}
+
 
 //In the event of a successfull goelocation
 function locationSuccess(position) {
@@ -26,7 +30,6 @@ function locationSuccess(position) {
   setLocationToMap([position.coords.longitude, position.coords.latitude])
   getLocationName(position.coords.latitude, position.coords.longitude)
   getWeather(position.coords.longitude, position.coords.latitude)
-  showPosition(position)
   currenttLat = position.coords.latitude;
   currentLong = position.coords.longitude;
 
@@ -39,7 +42,6 @@ function locationError() {
   setLocationToMap([-79.3966769, 43.6547567])
   getWeather(43.6547567, -79.3966769)
 }
-
 
 var getPostion = function (postion) {
   if (postion == null) {
@@ -67,7 +69,7 @@ var getPostion = function (postion) {
         } else {
           setLocationToMap([-79.3966769, 43.6547567])
         }
-      ;
+        ;
         break;
       case "dark":
         defaultPostion = "mapbox://styles/mapbox/dark-v10";
@@ -148,6 +150,7 @@ document.addEventListener("click", (e) => {
 });
 
 
+
 // //To set the location to the map
 function setLocationToMap(position) {
   const map = new mapboxgl.Map({
@@ -180,12 +183,14 @@ function setLocationToMap(position) {
   //To get directions
   map.addControl(
     new MapboxDirections({
-      accessToken: mapboxgl.accessToken
+      accessToken: mapboxgl.accessToken,
+      profile: mapboxgl.profile
     }),
     'top-left'
   );
 
 }
+
 
 
 //To get the location's Name from google maps API
@@ -202,8 +207,7 @@ function getLocationName(lat, lon) {
         if (results[1]) {
 
           //find country name
-          console.log("Lin")
-          console.log(results)
+
           for (var i = 0; i < results[0].address_components.length; i++) {
             for (var b = 0; b < results[0].address_components[i].types.length; b++) {
 
@@ -271,11 +275,8 @@ function getWeather(lon, lat, city) {
   fetch(url).then(response => response.json())
     .then(data => {
       showWeatherData(data.current, city);
-      console.log(data)
     })
 }
-
-
 
 //To set current weather to the page
 function showWeatherData(data, city) {
@@ -289,7 +290,77 @@ function showWeatherData(data, city) {
 }
 
 // To make weather draggable
-$( function() {
-    $( "#weather" ).draggable();
-  } );
+$(function () {
+  $("#weather").draggable();
+});
 
+// Mahesh start
+mapDirectionsContainerEl.addEventListener("change", function (event) {
+
+  var element = event.target;
+  if (element.parentNode.parentNode.id == "mapbox-directions-destination-input") {
+    var modal = document.getElementById("myModal");
+
+    var originContainerEl = document.querySelector("#mapbox-directions-origin-input");
+    var origin = originContainerEl.querySelector("input");
+
+
+    var destContainerEl = document.querySelector("#mapbox-directions-destination-input");
+    var dest = destContainerEl.querySelector("input");
+
+    // Makes the model visible, if the origin and destintaion are set
+    if (origin.value != "" && dest.value != "") {
+      modal.style.display = "block";
+    }
+  }
+});
+
+mapDirectionsContainerEl.addEventListener("click", function (event) {
+
+  var element = event.target;
+  if (element.matches("label")) {
+    mode = element.textContent;
+  }
+});
+
+
+myModalEl.addEventListener("click", function (event) {
+
+  var element = event.target;
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+
+  if (element.matches("button") && element.textContent == "Save") {
+
+    var originContainerEl = document.querySelector("#mapbox-directions-origin-input");
+    var origin = originContainerEl.querySelector("input");
+
+    var destContainerEl = document.querySelector("#mapbox-directions-destination-input");
+    var dest = destContainerEl.querySelector("input");
+
+    updateTripInfo(origin.value, dest.value);
+
+  }
+});
+
+// save trip info object to local storage 
+
+function updateTripInfo(origin, dest) {
+
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
+
+  var oldItems = JSON.parse(localStorage.getItem('tripInfos')) || [];
+  var newTripInfo =
+  {
+    'origin': origin,
+    'destination': dest,
+    'mode': mode,
+    'dateTime': dateTime
+  };
+  oldItems.push(newTripInfo);
+  localStorage.setItem('tripInfos', JSON.stringify(oldItems));
+
+}
