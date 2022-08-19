@@ -5,7 +5,7 @@ body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
 
 #weather{ 
     position: absolute;
-    top: 20%;
+    top: 80%;
     left: 0.4%;
     width: 300px;
     height: 75px;
@@ -47,5 +47,6 @@ body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
     right: 0.6%;
     z-index: 1;
 }
+
  
 
