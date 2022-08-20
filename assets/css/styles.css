@@ -48,7 +48,7 @@ body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
     z-index: 1;
 }
 
-<<<<<<< HEAD
+
 .hover-text{
     position: relative;
     display: inline;
@@ -71,9 +71,7 @@ body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
     visibility: visible;
     opacity: 0.7;
    }
-=======
-/*Mahesh start*/
-/* The Modal (background) */
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -82,7 +80,6 @@ body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
     left: 38%;
     width: 300px; /* Full width */
     height: 100px; /* Full height */
->>>>>>> ff94d89094846d35a642e12035b85adfbeeaf3ac
 
   }
   
