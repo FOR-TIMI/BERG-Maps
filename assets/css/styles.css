@@ -30,6 +30,14 @@ body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
     
 }
 
+#navbar-default{
+    z-index: 2;
+    background-color: rgba(246, 242, 242, 0.8); /* Black w/ opacity */
+}
+
+#navbar-default ul{
+    margin-right: 15px;
+}
 .primaryButton{
     width:100px;
     
