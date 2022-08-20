@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+font-family: poppins, sans-serif;
+background-color: #E6E3D2;
+color: #0758A7;
+height: 100vh;
+overflow: hidden;
+}
+
+a,#navbar-default{
+    text-decoration: none;
+    z-index: 99;
+}
+
+
+
+/* To set all berg icons  */
+.berg-logo{
+    display: inline-block;
+    background: url('../icons/berg-logo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.berg{
+    display:block;
+    width: 1em;
+    height: 1em; 
+}
+
+.berg-arrow-right{
+    display: inline-block;
+    background: url('../icons/berg-right-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 3px;
+}
+
+header .berg{
+    display:block;
+    width: 126.2px;
+    height: 66.37px;  
+}
+
+
+
+.background-video{
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 100%;
+    z-index: -1;
+}
+
+
+
+
+.hero{
+    top: -23%;
+    left: 0;
+    right: 0;
+}
+
+
+.button{
+    width: 120%;
+    padding: 5px 20px 5px 15px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    height: 40px;
+    background-color: #0758A7;
+    margin-top: 35px;
+    border-radius: 5px;
+
+}
+.get-direction-text{
+    color: #E6E3D2;
+}
+
+/* Icon Wobble Horizontal Effect */
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+    }
+    33.3% {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
+    }
+    49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+    66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+      -webkit-transform: translateX(6px);
+      transform: translateX(6px);
+    }
+    33.3% {
+      -webkit-transform: translateX(-5px);
+      transform: translateX(-5px);
+    }
+    49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+    66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  .hvr-icon-wobble-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-icon-wobble-horizontal .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .hvr-icon-wobble-horizontal:hover .hvr-icon, .hvr-icon-wobble-horizontal:focus .hvr-icon, .hvr-icon-wobble-horizontal:active .hvr-icon {
+    -webkit-animation-name: hvr-icon-wobble-horizontal;
+    animation-name: hvr-icon-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+  
+  
+
+@media (min-aspect-ratio: 16/9){
+    .background-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .background-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    .hero{
+        top: -18%;
+        z-index: -1;
+    }
+  }
+
+@media only screen and (max-width: 1200px) {
+    .hero{
+        top: -14%;
+        z-index: -1;
+    }
+  }
+
+@media only screen and (max-width: 800px) {
+    .hero{
+        top: 0;
+        z-index: -1;
+    }
+
+    .get-direction-text{
+        color: #0758A7;
+    }
+    body{
+        background-color: #ECEDE7;
+    }
+  }
+

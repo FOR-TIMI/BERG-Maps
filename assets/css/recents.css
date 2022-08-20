@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+font-family: poppins, sans-serif;
+background-color: #D8D5C2;
+color: #0758A7;
+
+}
+
+a,#navbar-default{
+    text-decoration: none;
+    z-index: 99;
+}
+
+nav .berg{
+    width: 138.42px;
+    height: 71.37px;  
+}
+
+
+
+
+/* To set all berg icons  */
+
+
+.berg{
+    display:block;
+    width: 1em;
+    height: 1em; 
+}
+
+.berg-logo{
+    display: inline-block;
+    background: url('../icons/berg-logo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.berg-history{
+    display: inline-block;
+    background: url('../icons/berg-history.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.berg-cycling{
+    display: inline-block;
+    background: url('../icons/berg-cycling.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.berg-driving{
+    display: inline-block;
+    background: url('../icons/berg-driving.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.berg-walking{
+    display: inline-block;
+    background: url('../icons/berg-walking.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+td{
+    text-align: center;
+    padding: 15px 20px;
+}
+.trip-history{
+    width: 80%;
+    margin: 0 auto;
+}
+.trip-history table{
+    width: 100%;
+    margin: 20px;
+    
+}
+hr{
+    margin: 20px;
+    border:1px solid #97947b;
+}
+
+.transport-box{
+    background-color: #D8D5C2;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+
+  
+  
+
+
+
