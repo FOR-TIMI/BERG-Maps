@@ -55,11 +55,6 @@ var getPostion = function (postion) {
         } else {
           setLocationToMap([-79.3966769, 43.6547567])
         }
-        /*navigator.geolocation.getCurrentPosition(
-          locationSuccess,
-          locationError,
-          { enableHighAccuracy: true }
-        )*/
         ;
         break;
       case "light":
