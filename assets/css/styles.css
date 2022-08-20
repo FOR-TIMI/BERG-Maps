@@ -48,5 +48,40 @@ body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
     z-index: 1;
 }
 
- 
+/*Mahesh start*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    top: 30%;
+    left: 38%;
+    width: 300px; /* Full width */
+    height: 100px; /* Full height */
 
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    padding: 10px;
+   /* background-color: #fefefe;*/
+    background-color: rgba(246, 242, 242, 0.7); /* Black w/ opacity */
+    border: 1px solid #888;
+    width: 100%;
+    height: 100%;
+  }
+
+  #myBtn {
+    border: 2px solid #888;
+    padding: 5px 5px 5px 5px;
+    margin: 8px;
+    border-radius: 8px;
+    background-color: bisque;
+    width: 72px; /* Full width */
+    height: 30px; /* Full height */
+    text-align: center;
+    font-size: 10px;
+    
+  }
+
+/*Mahesh end*/

@@ -5,92 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Mapbox CSS -->
-        <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <title>Berg</title>
 
+    <!-- tailwind css  -->
+    <link 
+    rel="stylesheet" 
+    href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" 
+    />
 
-        <!-- Mapbox Directions  -->
-        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
-    
-    
-         <!-- Our styles  -->
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Animate css  -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
 
-
-        <title>Berg map</title>
 </head>
-
 <body>
-    
-    <!-- Map  -->
-    <div id="map"></div>
-  
-    <!-- Recent search  -->
-    <section id="recent-searches">
-      <ul class="suggestion-list mt-5">
 
-      </ul>   
-        <!-- recent searches will go here  -->
-
-    </section>
-
+    <header>
+        <nav class=" border-gray-200 px-2 sm:px-4 py-2.5 rounded z-99">
+            <div class="container flex flex-wrap justify-between items-center mx-auto w-90">
+            <a href="#" class="flex items-center">
+                <i class="berg berg-logo"></i>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
 
 
-    <section id="weather" class="bg-white rounded flex justify-center items-center shadow-md overflow-hidden "> 
 
-        <!-- weather details will go here  -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium dark:border-gray-700 ">
+                <li>
+                    <a href="#" class="block py-2 pr-4 pl-3 text-lg text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white z-99" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="dashboard.html" class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">New Trip</a>
+                </li>
+                <li>
+                    <a href="tripHistory.html" class="block py-2 pr-4 pl-3 text-lg text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Trip History</a>
+                </li>
 
-    </section>
-
-
-    <section class = "mapLayer">
-        <button class ="viewButton"><img src="assets/icons/satelitle.png" class ="primaryButton" alt=""></button>
-            <div class ="popup">
-                <button class ="viewButton"><img src="assets/icons/outdoors.png"id="outdoor" class ="menuButton"alt=""></button>
-                <button class ="viewButton"><img src="assets/icons/light.png" id= "light"class ="menuButton"alt=""></button>
-                <button class ="viewButton"><img src="assets/icons/darkMap.png" id= "dark"class ="menuButton" alt=""></button>
-                <button class ="viewButton"><img src="assets/icons/satellite.png" id="satellite"class ="menuButton"alt=""></button>   
-                <button class ="viewButton"><img src="assets/icons/satelitle.png" id="satelliteStreets"class ="menuButton" alt=""></button>
-                <button class ="viewButton"><img src="assets/icons/navigation.png" id ="navigationDay" class ="menuButton"alt=""></button>
-                <button class ="viewButton "><img src="assets/icons/map (2).png" id ="navigationNight"class ="menuButton" alt=""></button>
+                </ul>
             </div>
-    </section>
+            </div>
+        </nav>
+   </header>
+
+    <main class="flex justify-center items-center absolute hero">
+      <div class="absolute flex flex-col justify-center items-center">
+            <p class="text-2xl get-direction-text">Where are you going today?</p> 
+
+
+            
+            <a class="view-all animate__animated hvr-icon-wobble-horizontal" href="dashboard.html">
+                <div class="button flex flex-row ">
+                    <span class="text-white pr-3">Get Directions</span> 
+                    <i class="berg berg-arrow-right hvr-icon pr-3"></i>  
+                </div>
+
+              
+
+            </a> 
+  
+             </div>
+       </div>
+
+       
+         <video src="assets/video/map.mp4" autoplay loop muted plays-inline class="background-video"></video>
+ 
+    </main>
 
 
 
-
- <!-- tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      }
-    }
-  </script>
+    <!-- tailwind Js  -->
+    <script src="https://unpkg.com/flowbite@1.5.2/dist/flowbite.js"></script>
 
 
-
-  <!-- Mapbox Script  -->
-  <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
-
-  <!-- Mapbox direction js  -->
-  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
-
-  <!-- google maps APi  -->
-  <script src="http://maps.google.com/maps/api/js?key=AIzaSyDLpzTr6v-3G2xkcH1b30RLNr56r66NNlE"></script>
-
-  <!-- jquery  -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-  <!-- jquery ui  -->
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
-
-  <script src="./assets/js/map.js"></script>
 </body>
 </html>
