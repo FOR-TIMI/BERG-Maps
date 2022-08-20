@@ -48,5 +48,26 @@ body { margin: 0; padding: 0; font-family: Montserrat, 'sans-serif';}
     z-index: 1;
 }
 
- 
+.hover-text{
+    position: relative;
+    display: inline;
+}
+.hover-text div{
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateX(-100%) translateY(-50%);
+    background: #fff;
+    color: black;
+    padding: 0 2px;
+    border: solid black 1px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.hover-text:hover div{
+    visibility: visible;
+    opacity: 0.7;
+   }
 

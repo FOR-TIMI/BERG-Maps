@@ -7,21 +7,27 @@ mapboxgl.accessToken =
 const WEATHER_API_KEY = "d582054f0f0dcf06c41ec1c6aa2bd8a9";
 var defaultPostion = "mapbox://styles/mapbox/streets-v11";
 
-
+var currenttLat = "";
+var currentLong = "";
+var isLocationError = false;
 //To get the user's current location//This method gets user's current location
 navigator.geolocation.getCurrentPosition(locationSuccess, locationError, {
   enableHighAccuracy: true,
 });
 
-  //In the event of a successfull goelocation
-function locationSuccess(position){
-    setLocationToMap([position.coords.longitude,position.coords.latitude])
-    getLocationName(position.coords.latitude,position.coords.longitude)
-    getWeather(position.coords.longitude,position.coords.latitude)
+//In the event of a successfull goelocation
+function locationSuccess(position) {
+  //setLocationToMap([position.coords.longitude,position.coords.latitude])
+  setLocationToMap([position.coords.longitude, position.coords.latitude])
+  getLocationName(position.coords.latitude, position.coords.longitude)
+  getWeather(position.coords.longitude, position.coords.latitude)
+  currenttLat = position.coords.latitude;
+  currentLong = position.coords.longitude;
 }
 
 //if the getPosition is unsuccessful, Longitude and latitude defaults to Downtown Toronto
 function locationError(){
+  isLocationError =true;
     getLocationName(43.6547567,-79.3966769)
     setLocationToMap([-79.3966769,43.6547567])
     getWeather(43.6547567,-79.3966769)
@@ -39,11 +45,7 @@ var getPostion = function (postion) {
         } else {
           setLocationToMap([-79.3966769, 43.6547567])
         }
-        /*navigator.geolocation.getCurrentPosition(
-          locationSuccess,
-          locationError,
-          { enableHighAccuracy: true }
-        )*/
+ 
         ;
         break;
       case "light":
@@ -269,11 +271,11 @@ function showWeatherData(data,city){
     <h5 id="city" class="text-lg">${city}</h5>
     <div class=" flex ml-12 items-center">
         <p class="text-sm">${Math.floor(data.temp)}°C</p>
-        <img src="http://openweathermap.org/img/wn/${
+        <img src="https://openweathermap.org/img/wn/${
           data.weather[0].icon
         }@2x.png" alt="weather icon">
     </div>
-    </div>`);
+    </div>`;
 }
 
 // To make weather draggable
@@ -282,7 +284,4 @@ $( function() {
   } );
 
 
-}
-$("#direction").on("click",directions);
-// "https://api.mapbox.com/matching/v5/mapbox/driving/-117.17282,32.71204;-117.17288,32.71225;-117.17293,32.71244;-117.17292,32.71256?
-// approaches=curb;curb;curb;curb&steps=true&access_token=pk.eyJ1Ijoic2FoZWJiaGFsbGEiLCJhIjoiY2w2bXgyb2k3MHB4ZjNqbzhqenA0MTRjYyJ9.QZjkRAT2mAVJTuYyrFGXvQ"
+
