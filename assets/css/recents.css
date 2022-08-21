@@ -73,12 +73,14 @@ nav .berg{
 
 
 
+
 td{
     text-align: center;
     padding: 15px 20px;
 }
 .trip-history{
-    width: 80%;
+  
+    width:80%;
     margin: 0 auto;
 }
 .trip-history table{
@@ -98,10 +100,36 @@ hr{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-
-
+/* On screens that are 992px or less, set the background color to blue */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.column {
+    flex: 25%;
+    padding: 20px;
+  }
+ @media screen and (max-width: 992px) {
+    .trip-history{
   
+        width:100%;
+        margin: 0 auto;
+    }
+    .column {
+      flex: 50%;
+    }
+  }
   
+  @media screen and (max-width: 600px) {
+    .trip-history{
+  
+        width:100%;
+        margin: 0 auto;
+    }
+    .row {
+      flex-direction: column;
+    }
+  }
 
 
 

@@ -26,7 +26,7 @@ if(localStorage.getItem('tripInfos')==null){
     trips =JSON.parse(localStorage.getItem('tripInfos'))
    
     for(var i = 0;i<trips.length;i++){
-    var tableRow = $("<tr>"); 
+    var tableRow = $("<tr>").addClass("column"); 
      var dateTime=trips[i].dateTime;
      dateTime=dateTime.split(" ");
      var date =dateTime[0];
