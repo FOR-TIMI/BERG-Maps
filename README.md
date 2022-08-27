@@ -14,8 +14,8 @@ The BERG web page uses the users location to determine the current weather in th
 <img width="959" alt="BERG_TRIP_HISTORY" src="https://user-images.githubusercontent.com/109004012/185772542-bff3f681-2e2d-46a1-b587-1d719007e947.png">
 
 ## URLs
-1. Github repositry link: https://github.com/sahebbhalla/BERG
-2. Deployed application link: https://sahebbhalla.github.io/BERG/ 
+1. Github repositry link: https://github.com/FOR-TIMI/BERG-Maps
+2. Deployed application link: https://for-timi.github.io/BERG-Maps/
 
 ## Installation
 
@@ -30,8 +30,8 @@ To install the project:
 ## Credits
 
 Collaborators:
-- Saheb Bhalla [Git Hub](https://github.com/sahebbhalla)
 - Erifeoluwa Femi-ladiran [Git Hub](https://github.com/FOR-TIMI)
+- Saheb Bhalla [Git Hub](https://github.com/sahebbhalla)
 - Mahesh Ramdas [Git Hub](https://github.com/maheshramdas)
 - Justin Collver [Git Hub](https://github.com/threewide)
 
@@ -40,7 +40,7 @@ API's:
 - Map Box [Map Box](https://docs.mapbox.com/api/)
 - Open Weather [Open Weather Map](https://openweathermap.org/api/one-call-api)
 
-CSS Framework's:
+CSS Framework:
 - Tailwind CSS [Tailwind CSS](https://tailwindcss.com/docs/installation)
 
 Guide's:
@@ -48,7 +48,7 @@ Guide's:
 
 ## License
 
-Copyright (c) [2022] [Justin Collver]
+Copyright (c) [2022] [Erifeoluwa Femi-ladiran]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
