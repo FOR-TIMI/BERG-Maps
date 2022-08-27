@@ -22,7 +22,7 @@ The BERG web page uses the users location to determine the current weather in th
 To install the project:
 
 1. Open a gitBash wnidow in the directory you would like to add the repository
-2. Copy and paste the following code into the terminal window: 'git clone https://github.com/sahebbhalla/BERG.git'
+2. Copy and paste the following code into the terminal window: 'git clone https://github.com/FOR-TIMI/BERG-Maps.git'
 3. Finally, to enter the development environment type: 'Code .' into the terminal
 
 ![Installation to development guide](./assets/images/installation-guide.png)
