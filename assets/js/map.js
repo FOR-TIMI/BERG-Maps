@@ -366,9 +366,4 @@ function updateTripInfo(origin, dest) {
   localStorage.setItem('tripInfos', JSON.stringify(oldItems));
 
 }
-//Get Directions
-const getDirectionsButton = document.querySelectorAll('#get-directions');
-getDirectionsButton.addEventListener('click',(e) => {
-  location.replace('/dashboard.html');
-})
 
