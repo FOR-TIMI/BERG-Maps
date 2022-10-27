@@ -8,6 +8,10 @@ The BERG web page uses the users location to determine the current weather in th
 - BERG helps save time and money by users not getting lost
 
 ## Screenshots
+![image](https://user-images.githubusercontent.com/104241247/198181837-6230ffc7-aed6-4925-8cc9-122294b876dc.png)
+![image](https://user-images.githubusercontent.com/104241247/198181873-b07fe2b4-3861-4a19-9794-6bfba7e7d89f.png)
+![image](https://user-images.githubusercontent.com/104241247/198181911-540191bd-4977-41fe-87ea-ba8919b01795.png)
+
 
 
 ## URLs
@@ -22,7 +26,7 @@ To install the project:
 2. Copy and paste the following code into the terminal window: 'git clone https://github.com/FOR-TIMI/BERG-Maps.git'
 3. Finally, to enter the development environment type: 'Code .' into the terminal
 
-![Installation to development guide](./assets/images/installation-guide.png)
+
 
 ## Credits
 
