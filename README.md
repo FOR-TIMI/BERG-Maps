@@ -9,9 +9,6 @@ The BERG web page uses the users location to determine the current weather in th
 
 ## Screenshots
 
-<img width="959" alt="BERG" src="https://user-images.githubusercontent.com/109004012/185772538-69c57f19-f091-4b68-9977-4dee8dd905ca.png">
-<img width="956" alt="BERG_NEW_TRIP" src="https://user-images.githubusercontent.com/109004012/185772540-3dd7e222-76c2-4e2f-84a3-48a0aa3007d4.png">
-<img width="959" alt="BERG_TRIP_HISTORY" src="https://user-images.githubusercontent.com/109004012/185772542-bff3f681-2e2d-46a1-b587-1d719007e947.png">
 
 ## URLs
 1. Github repositry link: https://github.com/FOR-TIMI/BERG-Maps
