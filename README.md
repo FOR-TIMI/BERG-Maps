@@ -7,6 +7,12 @@ The BERG web page uses the users location to determine the current weather in th
 - The motivation behind this app was to help users get to where they are travelling while also being aware of the current weather conditions
 - BERG helps save time and money by users not getting lost
 
+## Support the project ⭐
+If you feel awesome and want to support us in a small way, please consider following me, starring and sharing the repo! This helps us getting known and grow the community. 🙏
+ 
+ ![image](https://raw.githubusercontent.com/lusaxweb/vuesax/master/public/github-vuesax-star.gif)
+ 
+ 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/104241247/198181837-6230ffc7-aed6-4925-8cc9-122294b876dc.png)
 ![image](https://user-images.githubusercontent.com/104241247/198181873-b07fe2b4-3861-4a19-9794-6bfba7e7d89f.png)
