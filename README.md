@@ -51,7 +51,7 @@ CSS Framework:
 - Tailwind CSS [Tailwind CSS](https://tailwindcss.com/docs/installation)
 
 #
-Don't forget to add a star if you like this project - ❤️ Timi
+Made with ❤️ by Timi
 
 
 
