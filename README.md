@@ -8,7 +8,7 @@ The BERG web page uses the users location to determine the current weather in th
 - BERG helps save time and money by users not getting lost
 
 ## Support the project ⭐
-If you want to support us in a small way, please consider following me, starring and sharing the repo! 
+If you want to support, please consider following me, starring and sharing the repo! 
  
  ![image](https://raw.githubusercontent.com/lusaxweb/vuesax/master/public/github-vuesax-star.gif)
  
